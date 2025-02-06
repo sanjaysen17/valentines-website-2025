@@ -1,0 +1,50 @@
+<html lang="en">
+    <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="initializePage()">
+    <audio id="click-sound" src="things/click.mp3"></audio>
+    <audio id="bg-music" src="things/background.mp3" loop></audio>
+
+    <div class="background">
+        <div class="hearts-container"></div>
+    </div>
+
+    <div class="letter-container">
+        <div id="envelope">
+            <img src="things/envelope.png" alt="Envelope" id="envelope-img">
+            <img src="things/seal1.png" alt="Seal" id="seal-img" onclick="openLetter()">
+        </div>
+
+        <div id="letter-content" class="hidden">
+            <div class="message">
+                <p>
+                    My love,
+                </p>
+                <p>
+                    It is an honour honey, to get to call you mine. You've made my reality infinitely better
+                    than my wildest dreams. You are an absolute angel. You are a work of art, a masterpiece. You
+                    leave me no choice but to completely submit to your love.
+                </p>
+                <p>
+                    Being your Valentine would make me completely, and perfectly, and incandescently happy.
+                    So, Saradha...
+                </p>
+                <p class="question">Will you be my Valentine?</p>
+                <button id="yes-btn" onclick="answerYes()">Yes</button>
+                <button id="no-btn" onclick="answerNo()">No</button>
+                <p id="response-text" class="hidden"></p>
+                <img src="things/rose1.png" id="rose-img" class="hidden">
+            </div>
+        </div>
+
+        <button id="restart" class="hidden" onclick="location.reload()">Get asked again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
